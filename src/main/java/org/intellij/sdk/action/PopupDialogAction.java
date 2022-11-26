@@ -36,13 +36,15 @@ public class PopupDialogAction extends AnAction {
                 cursorMethod = methodDeclaration;
             }
         }
-        assert cursorMethod != null; // TODO white exception
-        stringBuilder.append("Number of methods in the the currently opened file: ").append(cursorMethod.findAll(VariableDeclarator.class).size()).append("\n");
-        String title = event.getPresentation().getDescription();
+        if (cursorMethod == null) {
+            stringBuilder.append("Put your cursor in some method, please\n");
+        } else {
+            stringBuilder.append("Number of variables defined in the currently selected method: ").append(cursorMethod.findAll(VariableDeclarator.class).size()).append("\n");
+        }
         Messages.showMessageDialog(
                 project,
                 stringBuilder.toString(),
-                title,
+                event.getPresentation().getDescription(),
                 Messages.getInformationIcon());
     }
 

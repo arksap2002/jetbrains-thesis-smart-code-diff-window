@@ -2,7 +2,7 @@
 
   <id>org.intellij.sdk.action</id>
 
-  <name>SDK: Action Sample</name>
+  <name>Statistics</name>
 
   <depends>com.intellij.modules.platform</depends>
 
@@ -12,11 +12,10 @@
 
   <actions>
     <action id="org.intellij.sdk.action.PopupDialogAction" class="org.intellij.sdk.action.PopupDialogAction"
-            text="Action Basics Plugin: Pop Dialog Action" description="SDK action example"
+            text="Plugin: Statistics" description="Statistics"
             icon="Icons.popup_statistics_action_icon">
       <add-to-group group-id="ToolsMenu" anchor="first"/>
-      <override-text place="MainMenu" text="Pop Dialog Action"/>
-      <keyboard-shortcut first-keystroke="control alt A" second-keystroke="C" keymap="$default"/>
+      <override-text place="MainMenu" text="Statistics"/>
       <mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>
     </action>
   </actions>
