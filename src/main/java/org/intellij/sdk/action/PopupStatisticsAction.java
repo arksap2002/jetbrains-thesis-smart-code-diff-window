@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 
-public class PopupDialogAction extends AnAction {
+public class PopupStatisticsAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {

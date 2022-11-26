@@ -11,7 +11,7 @@
   <resource-bundle>messages.BasicActionsBundle</resource-bundle>
 
   <actions>
-    <action id="org.intellij.sdk.action.PopupDialogAction" class="org.intellij.sdk.action.PopupDialogAction"
+    <action id="org.intellij.sdk.action.PopupStatisticsAction" class="org.intellij.sdk.action.PopupStatisticsAction"
             text="Plugin: Statistics" description="Statistics"
             icon="Icons.popup_statistics_action_icon">
       <add-to-group group-id="ToolsMenu" anchor="first"/>
