@@ -10,7 +10,6 @@ import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -28,7 +27,7 @@ public class PopupStatisticsAction extends AnAction {
         CompilationUnit compilationUnit = StaticJavaParser.parse(code);
         List<MethodDeclaration> methodDeclarations = compilationUnit.findAll(MethodDeclaration.class);
         stringBuilder.append("Number of methods in the the currently opened file: ").append(methodDeclarations.size()).append("\n");
-        int cursorLocation = StringUtils.countMatches(code.substring(0, editor.getCaretModel().getOffset()), "\n") + 1;
+        int cursorLocation = editor.getCaretModel().getLogicalPosition().line + 1;
         MethodDeclaration cursorMethod = null;
         for (MethodDeclaration methodDeclaration : methodDeclarations) {
             assert methodDeclaration.getBegin().isPresent();
