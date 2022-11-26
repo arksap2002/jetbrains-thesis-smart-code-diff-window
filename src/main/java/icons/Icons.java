@@ -6,8 +6,8 @@ import com.intellij.openapi.util.IconLoader;
 
 import javax.swing.*;
 
-public class SdkIcons {
+public class Icons {
 
-  public static final Icon Sdk_default_icon = IconLoader.getIcon("/icons/sdk_16.svg", SdkIcons.class);
+  public static final Icon popup_statistics_action_icon = IconLoader.getIcon("/icons/statistics_icon.svg", Icons.class);
 
 }
