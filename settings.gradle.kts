@@ -1,0 +1,1 @@
+rootProject.name = "jetbrains-thesis-smart-code-diff-window"
