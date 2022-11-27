@@ -8,4 +8,4 @@ To implement the Java code parser, I used the JavaParser framework, with which I
 The number of methods I searched using the command `compilationUnit.findAll(MethodDeclaration.class).size()` - counting the number of declaration methods in the program.\
 For searching the number of initialization variables, it was necessary firstly find the current method using the lines numbers of all methods and the cursor, and then using the command, similarly with the first part of this task, I searched `VariableDeclarator.class` inside this method.
 ## Demo video
-![Demo video](video.mp4)
+Demo video is in the `video.mp4` file.
